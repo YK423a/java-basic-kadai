@@ -6,9 +6,7 @@ abstract class Kato_Chapter18 {
 	String address = "住所は東京都中野区〇×です";
 	
 	//名を表すフィールドの値をセットする
-	public void setGivenName(String givenName) {
-		this.givenName = givenName;
-	}
+	
 	
 	public void commenIntroduce() {
 		System.out.println("名前は" + familyName + givenName);
