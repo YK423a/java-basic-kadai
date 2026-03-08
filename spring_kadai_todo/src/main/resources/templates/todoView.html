@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>ToDoリスト</h1>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th class="center">ID</th>
+            <th>タイトル</th>
+            <th class="center">優先度</th>
+            <th>ステータス</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="todo : ${todos}">
+            <td th:text="${todo.id}">1</td>
+            <td th:text="${todo.title}"></td>
+            <td class="center" th:text="${todo.priority}"></td>
+            <td th:text="${todo.status}"></td>
+        </tr>       
+    </tbody>
+</table>
+</body>
+</html>
