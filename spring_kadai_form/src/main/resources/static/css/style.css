@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+.form-row {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.form-group {
+	display: flex;
+	flex-direction: column;
+}
+
+label {
+	 width: 150px;
+}
+
+.error {
+    color: red;
+    font-size: 13px;
+    margin-top: 5px;
+}

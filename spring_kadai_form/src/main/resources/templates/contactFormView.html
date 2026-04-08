@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+
+<body>
+	<h1>お問い合わせフォーム</h1>
+	<form th:action="@{/confirm}" th:object="${contactForm}" method="post">
+		<div class="form-row">
+			<label>名前：</label>
+			<div class="form-group">
+				<input type="text" th:field="*{name}">
+				<p class="error" th:if="${#fields.hasErrors('name')}" th:errors="*{name}">
+				</p>
+			</div>
+		</div>
+
+		<div class="form-row">
+			<label>メールアドレス:</label>
+			<div class="form-group">
+				<input type="email" th:field="*{email}">
+				<p class="error" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></p>
+			</div>
+		</div>
+
+		<div class="form-row">
+			<label>お問い合わせ内容：</label>
+			<div class="form-group">
+				<textarea th:field="*{message}" cols="30" rows="10"></textarea>
+				<p class="error" th:if="${#fields.hasErrors('message')}" th:errors="*{message}">
+				</p>
+			</div>
+		</div>
+
+		<button type="submit">送信</button>
+	</form>
+</body>
+
+</html>
